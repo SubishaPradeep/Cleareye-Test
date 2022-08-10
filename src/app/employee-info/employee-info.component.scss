@@ -1,0 +1,30 @@
+.details{
+    
+    ul{
+        list-style-type: none;
+        max-width: 65%;
+        margin: 0 auto;
+        padding: 40px;
+        box-shadow: 5px 8px 20px 0px #ccc;
+        li{
+            display: flex;
+            padding: 10px;
+            
+        }
+
+        span{
+            &:first-child{
+                width:50%;
+                text-align: left;
+               
+            }
+            &:last-child{
+                padding-left: 30px;
+            }
+        }
+    }
+}
+h2{
+    padding: 25px 0!important;
+}
+

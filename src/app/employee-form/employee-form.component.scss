@@ -1,0 +1,68 @@
+;
+   h2{
+    padding: 15px 0;
+   }
+    .emp-form{
+        display: inline-block;
+       padding: 15px 0;
+       box-shadow: 5px 8px 20px 0px #ccc;
+       width: 60%;
+        .form-inner{
+            display:flex;
+            padding: 5px 10px;
+            margin: 15px;
+            label{
+                width:160px;
+                text-align: left;
+            }
+            .form-input{
+                padding:0 10px;
+                width: 75%;
+                border: 1px solid #ccc;
+               
+                input,textarea{
+                    width:100%;
+                    font-size: 25px;
+                    
+                }
+            
+                select{
+                    width: 100%;
+                    font-size: 25px;
+                    color:grey;
+                    padding: 0px;
+                }
+                .date{
+                    color: grey;
+                }
+            }
+            .gender{
+                display: flex;
+                border:none;
+                input{
+                width: 40px;
+                height: 30px;
+                padding-right:10px ;
+            }
+        }
+        }
+        .submit-button{
+            text-align: center;
+          
+            
+            button{
+                background-color: rgb(52, 52, 202);
+                color: white;
+                border: 1px solid grey;
+                border-radius: 30px;
+                font-size: 25px;
+                padding: 5px 20px;
+                cursor:pointer;
+            }
+            button:hover{
+                background-color:rgb(99 99 203);
+
+            }
+        }
+    }
+   

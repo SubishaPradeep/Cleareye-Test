@@ -1,0 +1,27 @@
+<div class="container" *ngIf="info && info.length >0">
+    <h2>
+        Employee Information
+    </h2>
+    <div class="details" *ngFor="let emp of info">
+        <ul>
+            <li>
+                <span>Name</span> :<span> {{emp.name}}</span>
+            </li>
+            <li>
+               <span> DOB </span>: <span>{{emp.dob}}</span>
+            </li>
+            <li>
+                <span>Gender</span> : <span>{{emp.gender}}</span>
+            </li>
+            <li >
+                <span>Phone </span>: <span *ngFor="let number of emp.phone">{{number}}</span>
+            </li>
+            <li>
+                <span>Role</span> : <span>{{emp.role}}</span>
+            </li>
+            <li>
+                <span>Address </span>: <span>{{emp.address}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

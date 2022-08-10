@@ -1,0 +1,68 @@
+<div class="container">
+    <h2>Employee form</h2>
+    <div class="emp-form">
+        <form [formGroup] = "employeeData" (ngSubmit)="submit()">
+            <div class="form-inner">
+                <label for="name">Name*</label>
+                <div class="form-input">
+                    <input type="text" id="name" formControlName="name" placeholder="name">
+                </div>
+            </div>
+            <div class="form-inner">
+                <label for="DOB">DOB*</label>
+                <div class="form-input">
+                    <input type="date" class="date" id="dob" formControlName="dob">
+                </div>
+            </div>
+            <div class="form-inner">
+                <label for="gender">Gender*</label>
+                <div class="form-input gender">
+                    <div>
+                    <input type="radio" id="male" name="gender" formControlName="gender" value="male">
+                    </div>
+                    <div >
+                        <input type="radio" id="female" name="gender" formControlName="gender" value="female">
+                    </div>
+                </div>
+            </div>
+            <div class="form-inner">
+                <label for="phone">phone*</label>
+                <div class="form-input" formArrayName="phone">
+                    <span *ngFor="let number of employeeData.controls.phone.controls; index as i">
+                    <input type="number" id="phone" [formControlName]="i" placeholder="phone" >
+                    </span>
+                </div>
+            </div>
+            <div class="form-inner">
+                <label for="role">Role*</label>
+                <div class="form-input">
+                    <select formControlName="role">
+                        <option value="">select*</option>
+                        <option>admin</option>
+                        <option>manager</option>
+                        <option>HR</option>
+                        <option>developer</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-inner">
+                <label for="address">Address*</label>
+                <div class="form-input">
+                    <textarea id="address" rows="7" formControlName="address" name="address"></textarea>
+                </div>
+            </div>
+            <div class="submit-button">
+                <button type="submit">
+                    Submit
+                </button>
+            </div> 
+        </form>
+       <div *ngIf="employeeData.status=='INVALID' && submitted">
+         Please select all fields
+       </div>
+               
+
+    </div>
+       
+</div>
+
